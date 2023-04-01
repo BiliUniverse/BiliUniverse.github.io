@@ -1,0 +1,98 @@
+import { ModuleInstall } from "@theme";
+import _Footer from "./_Footer.md";
+
+# 🌐 Global
+
+:::warning ⚠️ 兼容性
+
+Bilibili app所使用的`gRPC接口`已移除`HTTP/1.1兼容性`，仅保留`HTTP/2协议`支持  
+不支持`MitM over HTTP/2`的 VPN 不再可以使用本脚本  
+
+:::
+
+:::info ℹ️ 需配置
+
+使用前，请务必检查`默认配置`是否与您的实际情况相符  
+如不符，请使用`BoxJs`正确填写要`启用的地区`和对应`策略组或节点`名称  
+
+:::
+
+## 简介
+* 自动识别番剧影视内容地区限制并切换线路至对应地区
+  * 点开任意地区限制的番剧或影视内容，直接播放，无需配置文件内置策略与规则组
+  * 局域网环境下，多设备同时观看不同地区内容，互不影响
+* 自定义搜索地区，快捷返回各区搜索结果
+
+## 功能列表
+* 强制返回的CDN主机名类型    
+  * IP: 返回远端DNS解析地址（强烈不推荐！严重影响域名分流规则与CDN重定向）
+  * HTTP: 返回HTTP域名（推荐，免去重定向时MitM操作）
+  * HTTPS: 返回HTTPS域名（重定向时需对指定域名启用MitM）
+    * 此选项不限于媒体流的解析结果，搜索等其他返回的内容如图片音频也受此选项影响
+    * 选择`返回域名`的情况下，对于本身无`域名`只有`IP`的返回结果无效
+* 自动识别和分类功能地区设置
+  * 务必与代理软件策略相对应
+* 搜索时自定义搜索地区
+  * `搜索关键词` + `空格` + `地区名称`
+  * 如：`电锯人 🇭🇰` 或 `辉夜 台湾` 或 `尼尔 港`
+  * 支持的地区关键词有：
+    * 中国大陆：`CN` `CHN` `中` `中国` `🇨🇳`
+    * 中国香港：`HK` `HKG` `港` `香港` `🇭🇰`
+    * 中国澳门：`澳` `澳门` `🇲🇴`
+    * 中国台湾：`TW` `TWN` `台` `台湾` `🇹🇼`
+    * ~~东南亚（国际版）：`SEA` `东南亚` `🇺🇳` `TH` `泰` `泰国` `🇹🇭` `SG` `新` `新加坡` `🇸🇬` `MY` `马` `马来西亚` `🇲🇾`~~
+      * ~~东南亚（国际版）未来可能细分~~
+      * 国际版已拆分独立
+
+## 使用方式
+* 基础: 直接使用
+  * 采用默认配置
+    * 默认配置的地区识别与分流为`中国大陆`,`中国香港`,`中国台湾`
+      * 如果与您需要启用的地区设置不同，请参考`方法2`自行修改
+      * 东南亚（国际版）暂不可用
+    * 默认配置的各地区的策略组名分别为`DIRECT`,`🇭🇰香港`,`🇲🇴澳门`,`🇹🇼台湾`
+      * 如果与您配置文件中的策略组或节点名称不符，请参考`方法2`自行修改
+* 高级: 配合`BoxJs`及订阅使用
+  1. 安装`BoxJs`插件并更新引用资源或脚本:
+     * 安装方法及下载链接详见: [🧰 BoxJs](./box-js)
+  2. 在`BoxJs`的配置面板中进行个性化设置:
+    1. 浏览器访问[BoxJs.com](http://boxjs.com)
+    2. 在[`应用`](http://boxjs.com/#/app)页面点开`📺 BiliBili`折叠
+    3. 在[`📺 BiliBili: Global`](http://boxjs.com/#/app/BiliBili.Global)根据需要填写您的设置信息
+
+## 安装链接
+
+<ModuleInstall urlPrefix="https://github.com/BiliUniverse/Global/raw/main/modules/">
+  <ModuleInstall.Tab type="loon">
+    <ModuleInstall.Item url="BiliBili.Global.plugin" badge={<>需要 <a href="https://t.me/LoonNews/948" target="_blank">3.0.8 (542)</a> 及以上版本</>} />
+  </ModuleInstall.Tab>
+  <ModuleInstall.Tab type="surge">
+    <ModuleInstall.Item url="BiliBili.Global.sgmodule"/>
+  </ModuleInstall.Tab>
+  <ModuleInstall.Tab type="stash">
+    <ModuleInstall.Item url="BiliBili.Global.stoverride" badge={<>需要 2.2.0 (576) 及以上版本</>}/>
+  </ModuleInstall.Tab>
+  <ModuleInstall.Tab type="egern">
+    <ModuleInstall.Item url="BiliBili.Global.yaml"/>
+  </ModuleInstall.Tab>
+  <ModuleInstall.Tab type="qx">
+    <ModuleInstall.Item url="BiliBili.Global.snippet" badge={<>需要 1.4.0 (783) 及以上版本</>}>
+      - ❌ 不再支持`Quantumult X` (`Quantumult X`不支持MitM over HTTP/2)
+      - ~~因`Quantumult X`功能限制，脚本运行于兼容模式~~
+        - ~~首次进入番剧，无法探测当前剧集地区信息，需要切换一次集数或再进入一次~~
+        - ~~`白色版`可能无法获取地区限制番剧的剧集列表~~
+    </ModuleInstall.Item>
+  </ModuleInstall.Tab>
+  <ModuleInstall.Tab type="shadowrocket">
+    <ModuleInstall.Item url="BiliBili.Global.srmodule" badge={<>需要 2.2.29 (1925) 及以上版本</>}>
+    - ❌ 不再支持`Shadowrocket` (`Shadowrocket`不支持MitM over HTTP/2)
+    - ~~因`Shadowrocket`功能限制，脚本运行于兼容模式~~
+      - ~~首次进入番剧，无法探测当前剧集地区信息，需要切换一次集数或再进入一次~~
+      - ~~`白色版`可能无法获取地区限制番剧的剧集列表~~
+    </ModuleInstall.Item>
+  </ModuleInstall.Tab>
+</ModuleInstall>
+
+## 更新日志
+
+<_Footer />

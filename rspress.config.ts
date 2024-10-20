@@ -28,23 +28,6 @@ export default defineConfig({
   // },
   globalStyles: path.resolve('./assets/styles/global.css'),
   themeConfig: {
-    nav: [
-      {
-        text: '文档',
-        link: '/guide/index',
-        activeMatch: '^/guide/',
-      },
-      {
-        text: '更新日志',
-        link: '/changelog/enhanced',
-        activeMatch: '^/changelog/',
-      },
-      {
-        text: '论坛',
-        link: 'https://github.com/orgs/BiliUniverse/discussions',
-        activeMatch: '^/discussions/',
-      },
-    ],
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/BiliUniverse' },
       {

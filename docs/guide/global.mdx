@@ -3,13 +3,6 @@ import _Footer from "./_Footer.md";
 
 # 🌐 Global
 
-:::warning ⚠️ 兼容性
-
-Bilibili app所使用的`gRPC接口`已移除`HTTP/1.1兼容性`，仅保留`HTTP/2协议`支持  
-不支持`MitM over HTTP/2`的 VPN 不再可以使用本脚本  
-
-:::
-
 :::info ℹ️ 需配置
 
 使用前，请务必检查`默认配置`是否与您的实际情况相符  
@@ -62,7 +55,7 @@ Bilibili app所使用的`gRPC接口`已移除`HTTP/1.1兼容性`，仅保留`HTT
 
 ## 安装链接
 
-<ModuleInstall urlPrefix="https://github.com/BiliUniverse/Global/raw/main/modules/">
+<ModuleInstall urlPrefix="https://github.com/BiliUniverse/Global/releases/latest/download/">
   <ModuleInstall.Tab type="loon">
     <ModuleInstall.Item url="BiliBili.Global.plugin" badge={<>需要 <a href="https://t.me/LoonNews/948" target="_blank">3.0.8 (542)</a> 及以上版本</>} />
   </ModuleInstall.Tab>
@@ -77,18 +70,9 @@ Bilibili app所使用的`gRPC接口`已移除`HTTP/1.1兼容性`，仅保留`HTT
   </ModuleInstall.Tab>
   <ModuleInstall.Tab type="qx">
     <ModuleInstall.Item url="BiliBili.Global.snippet" badge={<>需要 1.4.0 (783) 及以上版本</>}>
-      - ❌ 不再支持`Quantumult X` (`Quantumult X`不支持MitM over HTTP/2)
       - ~~因`Quantumult X`功能限制，脚本运行于兼容模式~~
-        - ~~首次进入番剧，无法探测当前剧集地区信息，需要切换一次集数或再进入一次~~
+        - ~~首次进入番剧时，可能无法探测当前剧集地区信息，需要切换一次集数或再进入一次番剧页面~~
         - ~~`白色版`可能无法获取地区限制番剧的剧集列表~~
-    </ModuleInstall.Item>
-  </ModuleInstall.Tab>
-  <ModuleInstall.Tab type="shadowrocket">
-    <ModuleInstall.Item url="BiliBili.Global.srmodule" badge={<>需要 2.2.29 (1925) 及以上版本</>}>
-    - ❌ 不再支持`Shadowrocket` (`Shadowrocket`不支持MitM over HTTP/2)
-    - ~~因`Shadowrocket`功能限制，脚本运行于兼容模式~~
-      - ~~首次进入番剧，无法探测当前剧集地区信息，需要切换一次集数或再进入一次~~
-      - ~~`白色版`可能无法获取地区限制番剧的剧集列表~~
     </ModuleInstall.Item>
   </ModuleInstall.Tab>
 </ModuleInstall>

@@ -3,7 +3,7 @@ pageType: home
 
 hero:
   icon: 🪐
-  name: 🪐 BiliUniverse<br/>哔哩万象
+  name: 🪐 BiliUniverse
   text: |
     哔哩哔哩功能优化
     及增强解决方案
@@ -20,7 +20,7 @@ hero:
     alt: BiliUniverse Logo
 
 features:
-  - icon: ⚙
+  - icon: ⚙️
     title: Enhanced
     details: 全面自定义哔哩哔哩 App 主界面<br/>修改首页和底栏元素的显示顺序和触发功能
     span: 4

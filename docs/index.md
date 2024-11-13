@@ -22,37 +22,37 @@ hero:
 features:
   - icon: ⚙️
     title: Enhanced
-    details: 全面自定义哔哩哔哩 App 主界面<br/>修改首页和底栏元素的显示顺序和触发功能
+    details: <span class="features-details" align="center">全面自定义哔哩哔哩 App 主界面<br>修改首页和底栏元素的显示顺序和触发功能</span>
     span: 4
     link: /guide/enhanced
 
   - icon: 🌐
     title: Global
-    details: 自动识别番剧影视地区限制<br/>自动切换线路至对应地区<br/>快捷返回各区域搜索结果
+    details: <span class="features-details" align="center">自动识别番剧影视地区限制<br>自动切换线路至对应地区<br>快捷返回各区域搜索结果</span>
     span: 4
     link: /guide/global
 
   - icon: 🔀
     title: Redirect
-    details: 自动重定向 CDN<br/>让播放更流畅
+    details: <span class="features-details" align="center">自动重定向 CDN<br>让播放更流畅</span>
     span: 4
     link: /guide/redirect
 
   - icon: 🛡️
     title: ADBlock
-    details: 自定义去除 app 广告
+    details: <span class="features-details" align="center">自定义去除 app 广告</span>
     span: 4
     link: /guide/ad-block
 
   - icon: ✈
     title: Roaming
-    details: 通过公共解析服务器<br/>解除观看地区限制<br/>提供其他增强功能
+    details: <span class="features-details" align="center">通过公共解析服务器解除观看地区限制<br>提供其他增强功能</span>
     span: 4
     link: /guide/roaming
 
   - icon: 🧰
     title: BoxJs
-    details: 可视化配置面板
+    details: <span class="features-details" align="center">可视化配置面板</span>
     span: 4
     link: /guide/box-js
 ---

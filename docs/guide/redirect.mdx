@@ -11,22 +11,26 @@ import _Footer from "./_Footer.md";
 :::
 
 ## 简介
-* 保持模块开启，即可自定义重定向视频链接
-
-## 功能列表
+* 自定义重定向 BiliBili 视频源所使用的服务器主机名，加速视频加载速度
 
 ## 使用方式
 * 基础: 直接使用
-  * 采用默认配置
+  * 采用[默认配置](#默认设置)
+* 进阶: 配合`Loon`设置面板或`Surge`参数设置功能进行个性化设置
+  * 提供一定的自定义设置，如`Host`选择等
 * 高级: 配合`BoxJs`及订阅使用
+  <details>
+  <summary>ℹ️ 用前须知：使用`BoxJs`进行配置将被视为专业用户，官方不受理因使用`BoxJs`配置导致的各种问题</summary>
+
   1. 安装`BoxJs`插件并更新引用资源或脚本:
      * 安装方法及下载链接详见: [🧰 BoxJs](./box-js)
   2. 在`BoxJs`的配置面板中进行个性化设置:
     1. 浏览器访问[BoxJs.com](http://boxjs.com)
     2. 在[`应用`](http://boxjs.com/#/app)页面点开`📺 BiliBili`折叠
     3. 在[`📺 BiliBili: 🔀 Redirect`](http://boxjs.com/#/app/BiliBili.Redirect)根据需要填写您的设置信息
+  </details>
 
-## 默认设置
+## 功能列表
 
 ## 安装链接
 
@@ -42,6 +46,20 @@ import _Footer from "./_Footer.md";
   }}
 />
 
-## 更新日志
+## 默认设置
+* [主机名] 重定向 Akamaized CDN (港澳台)
+  * [x] 阿里云 CDN
+  * [ ] 腾讯云 CDN
+  * [ ] 华为云 CDN
+* [主机名] 重定向 BStar CDN (国际版)
+  * [x] 阿里云 CDN
+  * [ ] 腾讯云 CDN
+  * [ ] 华为云 CDN
+* [主机名] 重定向 PCDN (中国大陆)
+  * [x] 阿里云 CDN
+  * [ ] 腾讯云 CDN
+  * [ ] 华为云 CDN
+* [主机名] 重定向 MCDN (中国大陆)
+  * [x] proxy-tf-all-ws.bilivideo.com
 
 <_Footer />

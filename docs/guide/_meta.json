@@ -9,5 +9,11 @@
     "redirect",
     "ad-block",
     "roaming",
-    "box-js"
+    "box-js",
+    {
+        "type": "dir",
+        "name": "appendix",
+        "label": "📖 附录",
+        "collapsible": false
+    }
 ]

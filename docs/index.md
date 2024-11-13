@@ -3,7 +3,7 @@ pageType: home
 
 hero:
   icon: 🪐
-  name: 🪐 BiliUniverse
+  name: <span class="hero-name">🪐 哔哩万象<br>BiliUniverse</span>
   text: |
     哔哩哔哩功能优化
     及增强解决方案

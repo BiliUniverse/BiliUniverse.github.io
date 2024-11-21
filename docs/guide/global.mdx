@@ -57,19 +57,94 @@ import _Footer from "./_Footer.md";
 
 <ModuleInstall urlPrefix="https://github.com/BiliUniverse/Global/releases/latest/download/">
   <ModuleInstall.Tab type="loon">
-    <ModuleInstall.Item url="BiliBili.Global.plugin" badge={<>需要 <a href="https://t.me/LoonNews/948" target="_blank">3.0.8 (542)</a> 及以上版本</>} />
+    <ModuleInstall.Item
+      url="BiliBili.Global.plugin"
+      badge={[
+        {
+          type: "tip",
+          text: "MitM",
+          outline: true,
+        },
+        {
+          type: "info",
+          text: "脚本",
+          outline: true,
+        },
+        {
+          type: "info",
+          text: "需要 3.0.8 (542) 及以上版本",
+        },
+      ]}
+    />
   </ModuleInstall.Tab>
   <ModuleInstall.Tab type="surge">
-    <ModuleInstall.Item url="BiliBili.Global.sgmodule"/>
+    <ModuleInstall.Item
+      url="BiliBili.Global.sgmodule"
+      badge={[
+        {
+          type: "danger",
+          text: "MitM",
+          outline: true,
+        },
+        {
+          type: "warning",
+          text: "脚本",
+          outline: true,
+        },
+      ]}
+    />
   </ModuleInstall.Tab>
   <ModuleInstall.Tab type="stash">
-    <ModuleInstall.Item url="BiliBili.Global.stoverride" badge={<>需要 2.2.0 (576) 及以上版本</>}/>
+    <ModuleInstall.Item
+      url="BiliBili.Global.stoverride"
+      badge={[
+        {
+          type: "info",
+          text: "覆写",
+          outline: true,
+        },
+        {
+          type: "info",
+          text: "MitM",
+          outline: true,
+        },
+        {
+          type: "info",
+          text: "脚本",
+          outline: true,
+        },
+        {
+          type: "info",
+          text: "需要 2.2.0 (576) 及以上版本",
+        },
+      ]}
+    />
   </ModuleInstall.Tab>
   <ModuleInstall.Tab type="egern">
-    <ModuleInstall.Item url="BiliBili.Global.yaml"/>
+    <ModuleInstall.Item
+      url="BiliBili.Global.yaml"
+    />
   </ModuleInstall.Tab>
   <ModuleInstall.Tab type="qx">
-    <ModuleInstall.Item url="BiliBili.Global.snippet" badge={<>需要 1.4.0 (783) 及以上版本</>}>
+    <ModuleInstall.Item
+      url="BiliBili.Global.snippet"
+      badge={[
+        {
+          type: "danger",
+          text: "重写",
+          outline: true,
+        },
+        {
+          type: "tip",
+          text: "MitM",
+          outline: true,
+        },
+        {
+          type: "info",
+          text: "需要 1.4.0 (783) 及以上版本",
+        },
+      ]}
+    >
       - ~~因`Quantumult X`功能限制，脚本运行于兼容模式~~
         - ~~首次进入番剧时，可能无法探测当前剧集地区信息，需要切换一次集数或再进入一次番剧页面~~
         - ~~`白色版`可能无法获取地区限制番剧的剧集列表~~

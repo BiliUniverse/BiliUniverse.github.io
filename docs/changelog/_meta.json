@@ -1,0 +1,27 @@
+[
+  {
+    "type": "custom-link",
+    "label": "⚙ Enhanced",
+    "link": "/changelog/enhanced"
+  },
+  {
+    "type": "custom-link",
+    "label": "🌐 Global",
+    "link": "/changelog/global"
+  },
+  {
+    "type": "custom-link",
+    "label": "🔀 Redirect",
+    "link": "/changelog/redirect"
+  },
+  {
+    "type": "custom-link",
+    "label": "🛡️ ADBlock",
+    "link": "/changelog/ad-block"
+  },
+  {
+    "type": "custom-link",
+    "label": "✈ Roaming",
+    "link": "/changelog/roaming"
+  }
+]

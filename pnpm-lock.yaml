@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@iringo/doc-ui':
-        specifier: ^2.0.2
-        version: 2.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nsnanocat/doc-ui':
+        specifier: ^2.4.4
+        version: 2.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       remark-github:
         specifier: ^12.0.0
         version: 12.0.0
@@ -102,9 +102,6 @@ packages:
   '@bufbuild/protobuf@2.2.2':
     resolution: {integrity: sha512-UNtPCbrwrenpmrXuRwn9jYpPoweNXj8X5sMvYgsqYyaH8jQ6LfUJSk3dJLnBK+6sfYPrF4iAIo5sd5HQ+tg75A==}
 
-  '@iringo/doc-ui@2.0.2':
-    resolution: {integrity: sha512-ZFc6QurvLymP9+wtLCvhICvE8nj5Xw4apUdVk6PNzTVLSJ+y0e+1qHqF4o7VOtwaJIyZDbst0OIJ6mvbJr92/A==}
-
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
     engines: {node: '>=6.0.0'}
@@ -150,6 +147,13 @@ packages:
 
   '@module-federation/webpack-bundler-runtime@0.5.1':
     resolution: {integrity: sha512-mMhRFH0k2VjwHt3Jol9JkUsmI/4XlrAoBG3E0o7HoyoPYv1UFOWyqAflfANcUPgbYpvqmyLzDcO+3IT36LXnrA==}
+
+  '@nsnanocat/doc-ui@2.4.4':
+    resolution: {integrity: sha512-QAcWUTnroMp39Zq93IcZ1EiIwSiXRVn8SF75aGItNVvk3+AZz+xr5Ajq/mIIkxlQD7UktSDnsIYtdtbH+2MR6Q==, tarball: https://npm.pkg.github.com/download/@nsnanocat/doc-ui/2.4.4/908725be6df385d6ceb5c599b8c90e38c2f9d298}
+    engines: {node: '>=20'}
+    peerDependencies:
+      react: '>=18.3.1 <20'
+      react-dom: '>=18.3.1 <20'
 
   '@rc-component/portal@1.1.2':
     resolution: {integrity: sha512-6f813C0IsasTZms08kfA8kPAGxbbkYToa8ALaiDIGGECU4i9hj8Plgbx0sNJDrey3EtHO30hmdaxtT0138xZcg==}
@@ -1196,6 +1200,7 @@ packages:
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
 
   node-fetch@3.3.2:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
@@ -1844,14 +1849,6 @@ snapshots:
 
   '@bufbuild/protobuf@2.2.2': {}
 
-  '@iringo/doc-ui@2.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@rc-component/qrcode': 1.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      rc-tooltip: 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    transitivePeerDependencies:
-      - react
-      - react-dom
-
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
@@ -1925,6 +1922,13 @@ snapshots:
     dependencies:
       '@module-federation/runtime': 0.5.1
       '@module-federation/sdk': 0.5.1
+
+  '@nsnanocat/doc-ui@2.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@rc-component/qrcode': 1.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      rc-tooltip: 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@rc-component/portal@1.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
